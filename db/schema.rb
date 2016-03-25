@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160325062540) do
+ActiveRecord::Schema.define(version: 20160325231650) do
 
   create_table "declaracions", force: :cascade do |t|
     t.string   "entidad_departamento"
@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 20160325062540) do
     t.string   "correccion_id"
     t.date     "correccion_fecha"
     t.integer  "anio"
-    t.integer  "mes"
+    t.string   "mes"
     t.string   "nombres"
     t.string   "tipo_documento"
     t.string   "numero_documento"
@@ -39,11 +39,11 @@ ActiveRecord::Schema.define(version: 20160325062540) do
   create_table "gasolinas", force: :cascade do |t|
     t.integer  "declaracion_id"
     t.string   "clase"
-    t.integer  "galones_gravado"
-    t.integer  "precio_referencia"
-    t.integer  "porcentaje_alcohol"
-    t.integer  "base_gravable"
-    t.integer  "sobretasa"
+    t.float    "galones_gravado"
+    t.float    "precio_referencia"
+    t.float    "porcentaje_alcohol"
+    t.float    "base_gravable"
+    t.float    "sobretasa"
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
   end
