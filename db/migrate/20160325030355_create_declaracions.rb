@@ -10,7 +10,7 @@ class CreateDeclaracions < ActiveRecord::Migration
       t.string :correccion_id
       t.date :correccion_fecha
       t.integer :anio
-      t.integer :mes
+      t.string :mes
       t.string :nombres
       t.string :tipo_documento
       t.string :numero_documento
